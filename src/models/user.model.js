@@ -23,7 +23,12 @@ const userSchema = new mongoose.Schema({
         select:false
     },
     
-
+     systemUser:{
+       type: Boolean,
+       default:false,
+       immutable:true //system user create hone ke baad uska type change nahi hoga
+        
+     }
 },{
     timestamps: true
 })
